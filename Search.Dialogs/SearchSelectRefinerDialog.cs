@@ -38,7 +38,7 @@
             }
             else
             {
-                await context.PostAsync("Oops! You used all the available refiners and you cannot refine the results anymore.");
+                await context.PostAsync("D'oh! You used all the available refiners and you cannot refine the results anymore.");
                 context.Done<string>(null);
             }
         }
