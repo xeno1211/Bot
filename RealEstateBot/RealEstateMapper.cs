@@ -5,6 +5,7 @@
     using Search.Azure.Services;
     using Search.Models;
 
+    //Test
     public class RealEstateMapper : IMapper<DocumentSearchResult, GenericSearchResult>
     {
         public GenericSearchResult Map(DocumentSearchResult documentSearchResult)
