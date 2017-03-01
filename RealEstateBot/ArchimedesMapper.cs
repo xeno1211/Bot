@@ -55,7 +55,7 @@
 
 
             //return $"{beds} bedroom, {baths} bath in {city}, ${price:#,0}";
-            return $"Your question is {question} and the answer is {answer}.";
+            return $"Your question was \"{question}\" And the answer is \"{answer}\".";
         }
     }
 }
