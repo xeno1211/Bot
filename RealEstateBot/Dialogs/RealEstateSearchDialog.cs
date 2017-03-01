@@ -8,7 +8,7 @@
     public class RealEstateSearchDialog : SearchDialog
     {
         //private static readonly string[] TopRefiners = { "region", "city", "type" };
-        private static readonly string[] TopRefiners = { "answer" };
+        private static readonly string[] TopRefiners = { "Answers" };
 
         public RealEstateSearchDialog(ISearchClient searchClient) : base(searchClient, multipleSelection: true)
         {
