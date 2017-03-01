@@ -130,7 +130,7 @@
 
                 if (this.MultipleSelection)
                 {
-                    await context.PostAsync($"'{hit.Title}' was added to your list!");
+                    await context.PostAsync($"'{hit.Output}' was added to your list!");
                     PromptDialog.Confirm(context, this.ShouldContinueSearching, "Do you want to continue searching and adding more items?");
                 }
                 else

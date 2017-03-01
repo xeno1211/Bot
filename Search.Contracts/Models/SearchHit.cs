@@ -13,11 +13,11 @@
 
         public string Key { get; set; }
 
-        public string Title { get; set; }
+        public string Output { get; set; }
 
         public string PictureUrl { get; set; }
 
-        public string Description { get; set; }
+        public string Answer { get; set; }
 
         public IDictionary<string, object> PropertyBag { get; set; }
     }

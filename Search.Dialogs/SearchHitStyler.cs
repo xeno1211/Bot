@@ -17,10 +17,10 @@
             {
                 var cards = hits.Select(h => new ThumbnailCard
                 {
-                    Title = h.Title,
+                    Title = h.Output,
                     Images = new[] { new CardImage(h.PictureUrl) },
                     Buttons = new[] { new CardAction(ActionTypes.ImBack, "Pick this one", value: h.Key) },
-                    Text = h.Description
+                    Text = h.Answer
                 });
 
                 message.AttachmentLayout = AttachmentLayoutTypes.Carousel;

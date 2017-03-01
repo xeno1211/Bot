@@ -31,21 +31,29 @@
         {
             return new SearchHit
             {
-                Key = (string)hit.Document["listingId"],
-                Title = GetTitleForItem(hit),
-                PictureUrl = (string)hit.Document["thumbnail"],
-                Description = (string)hit.Document["description"]
+                //Key = (string)hit.Document["listingId"],
+                //Title = GetTitleForItem(hit),
+                //PictureUrl = (string)hit.Document["thumbnail"],
+                //Description = (string)hit.Document["description"]
+
+                Key = (string)hit.Document["Id"],
+                Output = GetOutputForItem(hit),
+                Answer = (string)hit.Document["Answer"]
             };
         }
 
-        private static string GetTitleForItem(SearchResult result)
+        private static string GetOutputForItem(SearchResult result)
         {
-            var beds = result.Document["beds"];
-            var baths = result.Document["baths"];
-            var city = result.Document["city"];
-            var price = result.Document["price"];
+            //var beds = result.Document["beds"];
+            //var baths = result.Document["baths"];
+            //var city = result.Document["city"];
+            //var price = result.Document["price"];
 
-            return $"{beds} bedroom, {baths} bath in {city}, ${price:#,0}";
+            var answer = result.Document["Answer"];
+            
+
+            //return $"{beds} bedroom, {baths} bath in {city}, ${price:#,0}";
+            return $"The answer is {answer}.";
         }
     }
 }

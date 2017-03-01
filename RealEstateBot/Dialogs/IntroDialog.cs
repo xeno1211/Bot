@@ -38,8 +38,8 @@
 
             if (selection != null && selection.Any())
             {
-                string list = string.Join("\n\n", selection.Select(s => $"* {s.Title} ({s.Key})"));
-                await context.PostAsync($"Eureka! For future reference, you selected these properties:\n\n{list}");
+                string list = string.Join("\n\n", selection.Select(s => $"* {s.Output} ({s.Key})"));
+                await context.PostAsync($"Eureka! For future reference, you asked these questions:\n\n{list}");
             }
 
             context.Done<object>(null);
