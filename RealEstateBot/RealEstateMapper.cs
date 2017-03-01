@@ -50,10 +50,11 @@
             //var price = result.Document["price"];
 
             var answer = result.Document["Answer"];
+            var question = result.Document["Question"];
             
 
             //return $"{beds} bedroom, {baths} bath in {city}, ${price:#,0}";
-            return $"The answer is {answer}.";
+            return $"Your question was {question}, and the answer is {answer}.";
         }
     }
 }
