@@ -38,7 +38,7 @@
 
                 Key = (string)hit.Document["Id"],
                 Output = GetOutputForItem(hit),
-                Answer = (string)hit.Document["Answer"]
+                Answer = (string)hit.Document["Answers"]
             };
         }
 
@@ -49,7 +49,7 @@
             //var city = result.Document["city"];
             //var price = result.Document["price"];
 
-            var answer = result.Document["Answer"];
+            var answer = result.Document["Answers"];
             
 
             //return $"{beds} bedroom, {baths} bath in {city}, ${price:#,0}";
