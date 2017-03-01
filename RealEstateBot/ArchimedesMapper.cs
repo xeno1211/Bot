@@ -1,4 +1,4 @@
-﻿namespace RealEstateBot
+﻿namespace ArchimedesBot
 {
     using System.Linq;
     using Microsoft.Azure.Search.Models;
@@ -39,6 +39,7 @@
                 Key = (string)hit.Document["Id"],
                 Output = GetOutputForItem(hit),
                 Answer = (string)hit.Document["Answers"]
+                //Question = (string)hit.Document["Questions"]
             };
         }
 
@@ -50,10 +51,11 @@
             //var price = result.Document["price"];
 
             var answer = result.Document["Answers"];
-            
+            var question = result.Document["Questions"];
+
 
             //return $"{beds} bedroom, {baths} bath in {city}, ${price:#,0}";
-            return $"The answer is {answer}.";
+            return $"Your question is {question} and the answer is {answer}.";
         }
     }
 }

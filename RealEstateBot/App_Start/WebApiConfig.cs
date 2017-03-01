@@ -1,4 +1,4 @@
-﻿namespace RealEstateBot
+﻿namespace ArchimedesBot
 {
     using System.Web.Http;
     using Newtonsoft.Json;

@@ -140,9 +140,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="RealEstateMapper.cs" />
+    <Compile Include="ArchimedesMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Dialogs\RealEstateSearchDialog.cs" />
+    <Compile Include="Dialogs\ArchimedesSearchDialog.cs" />
     <Compile Include="Dialogs\IntroDialog.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,4 +1,4 @@
-﻿namespace RealEstateBot.Dialogs
+﻿namespace ArchimedesBot.Dialogs
 {
     using System;
     using System.Collections.Generic;
@@ -28,7 +28,7 @@
 
         public Task StartSearchDialog(IDialogContext context, IAwaitable<IMessageActivity> input)
         {
-            context.Call(new RealEstateSearchDialog(this.searchClient), this.Done);
+            context.Call(new ArchimedesSearchDialog(this.searchClient), this.Done);
             return Task.CompletedTask;
         }
 

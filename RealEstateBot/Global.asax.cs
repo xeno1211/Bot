@@ -1,4 +1,4 @@
-﻿namespace RealEstateBot
+﻿namespace ArchimedesBot
 {
     using System.Web;
     using System.Web.Http;
@@ -6,7 +6,7 @@
     using Microsoft.Azure.Search.Models;
     using Microsoft.Bot.Builder.Dialogs;
     using Microsoft.Bot.Builder.Internals.Fibers;
-    using RealEstateBot.Dialogs;
+    using ArchimedesBot.Dialogs;
     using Search.Azure.Services;
     using Search.Models;
     using Search.Services;
