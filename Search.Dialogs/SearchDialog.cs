@@ -65,12 +65,25 @@
                         ref message,
                         "Eureka! Here are a few good options I found:",
                         this.found.ToList().AsReadOnly());
-                    await context.PostAsync(message);
-                    await context.PostAsync(
-                        this.MultipleSelection ?
-                        "You can select one or more to add to your list, *list* what you've selected so far, *refine* these results, see *more* or search *again*." :
-                        "You can select one, *refine* these results, see *more* or search *again*.");
-                    context.Wait(this.ActOnSearchResults);
+                    if (text == "Contact help desk")
+                    {
+                        await context.PostAsync("The help desk phone number is 888-337-2400");
+                        await context.PostAsync(
+                            this.MultipleSelection ?
+                            "You can select one or more to add to your list, *list* what you've selected so far, *refine* these results, see *more* or search *again*." :
+                            "You can select one, *refine* these results, see *more* or search *again*.");
+                        context.Wait(this.ActOnSearchResults);
+                    }
+                    else
+                    {
+                        await context.PostAsync(message);
+                        
+                        await context.PostAsync(
+                            this.MultipleSelection ?
+                            "You can select one or more to add to your list, *list* what you've selected so far, *refine* these results, see *more* or search *again*." :
+                            "You can select one, *refine* these results, see *more* or search *again*.");
+                        context.Wait(this.ActOnSearchResults);
+                    }
                 }
             }
         }
